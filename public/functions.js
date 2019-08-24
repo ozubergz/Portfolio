@@ -1,0 +1,33 @@
+//reset page to top when refreshed
+$(window).on('beforeunload', function () {
+  $(this).scrollTop(0);
+});
+
+$(window).scroll(function() {
+  let scrollTop = $(this).scrollTop();
+  // let height = $(this).height();
+
+  //fades out parallax logo when scrolling down
+  $('.logo').css({
+    opacity: function() {
+      opacity = (1 - (scrollTop / 400));
+      return opacity;
+    }
+  });
+
+  //move items up when scrolled down
+  if(scrollTop > 0) {
+    $('.projects, .resume, .contact').addClass('animateUp');
+  } else {
+    $('.projects, .resume, .contact').removeClass('animateUp');
+  }
+  
+});
+
+//show collapse only once when clicked multiple times
+$('div[data-toggle="collapse"]').on('click', function(e) {
+  let target = $(this).data('target');
+  if($(target).hasClass('show')) {
+    e.stopPropagation();
+  }
+});

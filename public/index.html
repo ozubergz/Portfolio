@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- BOOTSTRAP STYLESHEET -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Abel|Montserrat&display=swap" rel="stylesheet">
+
+  <!-- STYLESHEET CSS -->
+  <link rel="stylesheet" href="/public/styles.css">
+  
+  <title>Ozubergz</title>
+
+</head>
+<body>
+
+  <header class="parallax-box">
+    <div class="logo"></div>
+  </header>
+  
+  <div class="scroll-down">
+    <img src="/public/images/scroll.svg" alt="scroll arrow">
+  </div>
+
+  <div class="container-fluid content" id="content">
+
+    <div class="button-group">
+      <div class="row">
+        <div class="btn projects col-md-4" data-toggle="collapse" data-target="#projects" aria-expanded="false" aria-controls="projects">
+          Projects
+        </div>
+        <div class="btn resume col-md-4" data-toggle="collapse" data-target="#resume"  aria-expanded="false" aria-controls="resume">
+          Resume / About Me
+        </div>
+        <div class="btn contact col-md-4" data-toggle="collapse" data-target="#contact"  aria-expanded="false" aria-controls="contact">
+          Contact
+        </div>
+      </div>
+    </div>
+
+    <div class="body-group mt-4">
+      <div class="collapse" id="projects" data-parent="#content">
+        <div class="content-body">
+          
+          <div id="carouselControls" class="carousel slide" data-interval="false" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="image" id="project1"></div>
+                <div class="description">
+                  <h3 class="project-title">Rising Academy</h3>
+                  <p class="project-description">This website is built for an afterschool program. I was a former teacher at an afterschool called the Rising Star Learning Center. Being a teacher at Rising Star made me inspire to make this website. The website requires parents to sign up with their email account and allow them to register their children to become a student.</p>
+                  
+                  <div class="backend-list">
+                    <h4>Backend</h4>
+                    <ul>
+                      <li>MongoDB</li>
+                      <li>Mongoose</li>
+                      <li>Express</li>
+                      <li>Node.js</li>
+                      <li>Passport.js</li>
+                      <li>Passwords hashed and salted</li>
+                    </ul>
+                  </div>
+                    
+                  <div class="frontend-list">
+                    <h4>Frontend</h4>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JQuery</li>
+                      <li>Bootstrap</li>
+                      <li>EJS</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div>Project 2</div>
+              </div>
+              <div class="carousel-item">
+                <div>Project 3</div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="collapse show" id="resume" data-parent="#content">
+        <div class="content-body">
+          <div class="about-me">
+            <h4>About Me</h4>
+            <ul>
+              <li>Former educator who wants to become a web developer</li>
+              <li>Self-taught web developer</li>
+              <li>Interest in web-design and film</li>
+            </ul>
+          </div>
+          <div class="row container mt-5">
+            <div class="experience col-md-6">
+              <h4>Work Experience</h4>
+              <div>
+                <h5 class="job-title">Risingstar Learning Center, College Point — Teacher</h5>
+                <h6 class="job-date">September 2016 - June2019</h6>
+                <ul>
+                  <li>Teach students from ages 7 - 12 (2nd grade to grade 7th)</li>
+                  <li>Teach students mainly math and english</li>
+                  <li>Make lesson plans for 2nd to 7th graders</li>
+                  <li>Help prepare students for state exams</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="job-title">New York Film Academy, Manhattan — Teacher Assistant</h5>
+                <h6 class="job-date">July 2016 - August 2016</h6>
+                <ul>
+                  <li>Teach students how to use digital cameras</li>
+                  <li>Teach students with lighting</li>
+                  <li>Teach students with shooting, writing and directing</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills col-md-3">
+              <div>
+                <h4>Skills</h4>
+                <ul>
+                  <li>Develop websites with backend - implemented securties and servers</li>
+                  <li>Develop frontend websites with basic animation and design</li>
+                  <li>Hash and salt password (Passport.js)</li>
+                  <li>Host websites</li>
+                  <li>Push projects in github</li>
+                  <li>API and RESTful API</li>
+                  <li>Git Bash Terminal</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe XD</li>
+                </ul>
+              </div>
+            </div>
+            <div class="language col-md-3">
+              <div>
+                <h4>Language</h4>
+                <ul>
+                  <li>Html</li>
+                  <li>Javascript</li>
+                  <li>CSS</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>Mongoose</li>
+                  <li>MongoDB</li>
+                  <li>React.js</li>
+                  <li>Redux</li>
+                  <li>Bootstrap</li>
+                  <li>JQuery</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="collapse" id="contact" data-parent="#content">
+        <div class="content-body">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+
+
+</body>
+
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- BOOTSTRAP JQUERY -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/public/functions.js"></script>
+<script src="/public/loadImg.js"></script>
+</html>
