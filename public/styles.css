@@ -25,20 +25,20 @@ html, body {
   background: black;
 }
 
-.content {
+.main-container {
   height: 100%;
   background-color: #252525;
   font-family: 'Montserrat', sans-serif;
 }
 
-.content > .button-group {
+.main-container > .button-group {
   margin: 0 auto;
   width: 50%;
   border-bottom: 1px solid rgb(114, 114, 114);
   padding: 1rem;
 }
 
-.button-group .btn {
+.main-container > .button-group .btn {
   color: white;
   border-radius: 0%;
   position: relative;
@@ -46,22 +46,22 @@ html, body {
   opacity: 0;
 }
 
-.button-group .btn:hover {
+.main-container > .button-group .btn:hover {
   cursor: pointer;
   background: rgb(56, 56, 56);
   opacity: 0.5;
   color:rgb(136, 136, 136);
 }
 
-.button-group .projects {
+.main-container > .button-group .projects {
   animation-delay: .3s
 }
 
-.button-group .resume {
+.main-container > .button-group .resume {
   animation-delay: .4s
 }
 
-.button-group .contact {
+.main-container > .button-group .contact {
   animation-delay: .5s
 }
 
@@ -76,97 +76,138 @@ html, body {
   }
 }
 
-.content-body {
+.resume-content {
   color: white;
 }
 
-.content-body h4 {
+.resume-content h4 {
   color: rgb(141, 141, 141);
 }
 
-.content-body > .row {
+.resume-content > .row {
   margin: 0 auto;
 }
 
-ul {
+.resume-content ul {
   list-style: none;
   text-indent: none;
+  padding-left: 0;
 }
 
-li {
-  font-family: 'Open Sans',
+.resume-content li {
+  font-family: 'Abel',
   sans-serif;
   font-size: 0.8rem;
 }
 
-.experience {
-  padding-left: 5rem;
-}
-
-.about-me {
+.resume-content .about-me {
   text-align: center;
 }
 
-.about-me > ul {
-  padding-left: 0;
+.resume-content .job-experience {
+  padding-left: 5rem;
 }
 
-.skills ul {
-  padding-left: 0;
+.resume-content .job-experience ul {
+  padding-left: 2rem;
 }
 
-.skills li {
-  margin-bottom: 0.5rem;
-}
-
-.language ul {
-  padding-left: 0;
-}
-
-.job-date {
-  font-size: 0.8rem;
-}
-
-.job-title {
+.resume-content .job-title {
   font-size: 0.9rem;
 }
 
-.carousel-item {
-  background: gray;
-  padding: 1rem;
-}
-
-.thumbnail {
-  width: 23%;
-  float: left;
-}
-
-.description  h4{
-  color: white;
-}
-
-.backend-list {
-  display: inline-block;
-  margin-top: 0;
-}
-
-.backend-list ul {
-  padding-left: 0;
-}
-
-.project-description {
+.resume-content .job-date {
   font-size: 0.8rem;
 }
 
-.frontend-list {
-  display: inline-block;
-  margin-left: 1rem;
-  
+.resume-content .skills li {
+  margin-bottom: 0.6rem;
 }
 
-.frontend-list ul {
-  padding-left: 0;
-  margin-bottom: 10rem;
+.carousel-inner {
+  margin: 0 auto;
+  width: 70vw;
+}
+
+.carousel-img {
+  position: relative;
+  left: 15vw;
+  z-index: 1;
+}
+
+.carousel-img .thumbnail {
+  float: left;
+  width: 20vw;
+}
+
+.carousel-text {
+  position: relative;
+  z-index: 0;
+  color: white;
+  text-align: justify;
+  width: 45vw;
+}
+
+.carousel-text .project-title {
+  position: relative;
+  left: 17vw;
+}
+
+.carousel-text .project-description {
+  font-size: 0.9rem;
+  position: relative;
+  left: 17vw;
+  font-family: 'Abel',
+  sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.overlay-thumbnail {
+  position: absolute;
+  background: rgb(88, 142, 241);
+  height: 90vh;
+  width: 20vw;
+  opacity: 0.4;
+  transition: .4s ease;
+}
+
+.carousel-img:hover .overlay-thumbnail {
+  height: 0;
+}
+
+.github-link {
+  position: relative;
+  left: 17vw;
+}
+
+.github-text {
+  position: relative;
+  font-size: 1rem;
+  bottom: 0.3rem;
+}
+
+.codepen-text {
+  font-size: 1rem;
+}
+
+.codepen-btn {
+  text-align: right;
+  margin-right: 8vw;
+}
+
+.construction {
+  background: black;
+  width: 20vw;
+  height: 64vh;
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 
@@ -177,25 +218,24 @@ li {
     margin-top: 5rem;
   }
 
-  li {
-    font-family: 'Abel', sans-serif;
-    font-size: 1rem;
-  }
-  
-  .experience {
-    padding-left: 0;
-  }
-
-  .job-date {
+  .resume-content li {
     font-size: 1rem;
   }
 
-  .job-title {
+  .resume-content .job-title {
     font-size: 1rem;
   }
 
-  .language {
-    padding-left: 8rem;
+  .resume-content .job-date {
+    font-size: 1rem;
+  }
+
+  .resume-content .language {
+    padding-left: 3rem;
+  }
+
+  .carousel-text .project-description {
+    font-size: 1rem;
   }
 
 }
