@@ -121,7 +121,7 @@ html, body {
 }
 
 .resume-content .skills li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .carousel-inner {
@@ -167,10 +167,10 @@ a:hover {
 
 .overlay-thumbnail {
   position: absolute;
-  background: rgb(88, 142, 241);
+  background: gold;
   height: 90vh;
   width: 20vw;
-  opacity: 0.4;
+  opacity: 0.2;
   transition: .4s ease;
 }
 
@@ -195,7 +195,7 @@ a:hover {
 
 .codepen-btn {
   text-align: right;
-  margin-right: 8vw;
+  margin-right: 24vw;
 }
 
 .construction {
@@ -208,6 +208,46 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-decoration: underline;
+}
+
+#resume {
+  margin-top: 2rem;
+}
+
+.codepen-btn {
+  margin-top: 1rem;
+}
+
+.carousel {
+  margin-top: 2rem;
+}
+
+.contact-link {
+  margin-left: 24vw;
+  margin-top: 1rem;
+}
+
+.contact-form {
+  font-family: 'Abel',
+  sans-serif;
+  color: white;
+  width: 35vw;
+  margin-top: 1.5rem;
+}
+
+.contact-form p {
+  font-family: 'Montserrat',
+  sans-serif;
+  font-size: 0.9rem;
+}
+
+.contact-form label {
+  font-size: 0.8rem;
+}
+
+.contact-form .btn {
+  width: 100%;
 }
 
 
@@ -234,7 +274,24 @@ a:hover {
     padding-left: 3rem;
   }
 
+  .carousel {
+    margin-top: 5rem;
+  }
+
   .carousel-text .project-description {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    margin-top: 6rem;
+    width: 25vw;
+  }
+
+  .contact-form p {
+    font-size: 1rem;
+  }
+
+  .contact-form label {
     font-size: 1rem;
   }
 

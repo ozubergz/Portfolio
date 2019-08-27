@@ -52,7 +52,7 @@
       <div class="collapse" id="projects" data-parent="#main-container">
         <div class="projects-content">
 
-          <div class="codepen-btn mt-4">
+          <div class="codepen-btn">
             <a class="codepen-link btn btn-secondary" href="https://codepen.io/Ozubergs/pens/" target="_blank">
               <span class="codepen-text">SEE MORE AT C</span>
               <i class="fa fa-codepen"></i>
@@ -60,7 +60,7 @@
             </a>
           </div>
           
-          <div id="carouselControls" class="carousel slide mt-5" data-interval="false" data-ride="carousel">
+          <div id="carouselControls" class="carousel slide" data-interval="false" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="carousel-img">
@@ -81,9 +81,8 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="construction text-center">
-                  <h1>? ? ?</h1>
-                  <h5>In Construction</h5>
+                <div class="construction">
+                  <h5>Coming Soon...</h5>
                 </div>
               </div>
             </div>
@@ -168,8 +167,31 @@
         </div>
       </div>
       <div class="collapse" id="contact" data-parent="#main-container">
-        <div class="contact-content">
-          <h1>Contact</h1>
+
+        <div class="contact-link">
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/james-min-814371192/" target="_blank" role="button">
+            <span>See me at Linked-</span>
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+
+        <div class="contact-form container">
+          <p>If you like to contact me, feel free to submit a message with your email.</p>
+          <form method="POST" action="/contact">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" class="form-control" name="subject">
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
         </div>
       </div>
     </div>
