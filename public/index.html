@@ -26,23 +26,22 @@
 
   <header class="parallax-box">
     <div class="logo"></div>
+    <div class="scroll-down">
+      <img src="/public/images/scroll.svg" alt="scroll arrow">
+    </div>
   </header>
-  
-  <div class="scroll-down">
-    <img src="/public/images/scroll.svg" alt="scroll arrow">
-  </div>
 
   <div class="container-fluid main-container" id="main-container">
 
     <div class="button-group">
       <div class="row">
-        <div class="btn projects col-md-4" data-toggle="collapse" data-target="#projects" aria-expanded="false" aria-controls="projects">
+        <div class="btn projects col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#projects" aria-expanded="false" aria-controls="projects">
           Projects
         </div>
-        <div class="btn resume col-md-4" data-toggle="collapse" data-target="#resume"  aria-expanded="true" aria-controls="resume">
+        <div class="btn resume col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#resume"  aria-expanded="true" aria-controls="resume">
           Resume / About Me
         </div>
-        <div class="btn contact col-md-4" data-toggle="collapse" data-target="#contact"  aria-expanded="false" aria-controls="contact">
+        <div class="btn contact col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#contact"  aria-expanded="false" aria-controls="contact">
           Contact
         </div>
       </div>
@@ -65,7 +64,15 @@
               <div class="carousel-item active">
                 <div class="carousel-img">
                   <a href="https://serene-gorge-44988.herokuapp.com/" id="project1" target="_blank">
-                    <div class="overlay-thumbnail"></div>
+                    <div class="overlay-thumbnail">
+                      <div class="overlay-text">
+                        <h3 class="project-title">Rising Academy</h3>
+                        <p class="project-description">This website is built for an afterschool program. I was a former teacher at
+                          an afterschool called the Rising Star Learning Center. Being a teacher at Rising Star made me inspire to make this
+                          website. The website requires parents to sign up with their email account and allow them to register their children
+                          to become a student.</p>
+                      </div>
+                    </div>
                   </a>
                 </div>
                 <div class="carousel-text">
@@ -81,9 +88,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="construction">
-                  <h5>Coming Soon...</h5>
-                </div>
+                <div id="construction"></div>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -107,7 +112,7 @@
               <li>Interest in web-design and film</li>
             </ul>
           </div>
-          <div class="container row mt-5">
+          <div class="container row">
             <div class="job-experience col-md-6">
               <h4>Work Experience</h4>
               <div>
@@ -145,22 +150,32 @@
               </div>
             </div>
             <div class="language col-md-3">
-              <div>
-                <h4>Language</h4>
-                <ul>
-                  <li>Html</li>
-                  <li>Javascript</li>
-                  <li>CSS</li>
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>Mongoose</li>
-                  <li>MongoDB</li>
-                  <li>React.js</li>
-                  <li>Redux</li>
-                  <li>Bootstrap</li>
-                  <li>JQuery</li>
-                </ul>
+              <div class="row">
+                
+                <div class="tools col-md-12 col-sm-12 col-4">
+                  <h4>Tools & Technologies</h4>
+                  <ul>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Mongoose</li>
+                    <li>MongoDB</li>
+                    <li>React.js</li>
+                    <li>Redux</li>
+                    <li>Bootstrap</li>
+                    <li>JQuery</li>
+                  </ul>
+                </div>
+                <div class="skill-langs col-md-12 col-sm-12 col-8">
+                  <h4>Language</h4>
+                  <ul>
+                    <li>Html</li>
+                    <li>Javascript</li>
+                    <li>CSS</li>
+                  </ul>
+                </div>
               </div>
+              
+
             </div>
           </div>
 
@@ -175,7 +190,7 @@
           </a>
         </div>
 
-        <div class="contact-form container">
+        <div class="contact-form">
           <p>If you like to contact me, feel free to submit a message with your email.</p>
           <form method="POST" action="/contact">
             <div class="form-group">
