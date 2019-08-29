@@ -15,9 +15,7 @@ app.post("/contact", function(req, res) {
       subject = req.body.subject,
       message = req.body.message;
 
-  console.log(email, subject, message)
-  
-  
+  console.log(email, subject, message);
 });
 
 app.listen(3000, function() {

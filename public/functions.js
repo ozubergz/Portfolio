@@ -31,3 +31,20 @@ $('div[data-toggle="collapse"]').on('click', function(e) {
     e.stopPropagation();
   }
 });
+
+//if screen width greater than mobile screen hide overlay text
+$(window).resize(function () {
+  const width = $(window).width();
+  if (width > 767) {
+    $('.overlay-text').hide();
+  }
+});
+
+$('#show-info').click(function() {
+  $('.overlay-text').show();
+});
+
+$('#hide-info').click(function() {
+  $('.overlay-text').hide();
+});
+

@@ -1,5 +1,4 @@
 $(window).on("load", function () {
-
   const img = new Image();
   $(img).attr({
     src: '/public/images/rising_thumbnail.jpg',
@@ -12,7 +11,7 @@ $(window).on("load", function () {
     src: '/public/images/construction.jpg',
     class: 'construction-thumbnail'
   });
-  $('#construction').append(constructionImg);
+  $('#construction-img').append(constructionImg);
   
-
+  
 });
