@@ -32,7 +32,7 @@ $('div[data-toggle="collapse"]').on('click', function(e) {
   }
 });
 
-//if screen width greater than mobile screen hide overlay text
+//if screen width is greater than mobile screen, hide overlay text
 $(window).resize(function () {
   const width = $(window).width();
   if (width > 767) {
@@ -47,4 +47,3 @@ $('#show-info').click(function() {
 $('#hide-info').click(function() {
   $('.overlay-text').hide();
 });
-
