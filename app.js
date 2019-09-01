@@ -1,15 +1,25 @@
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const ejs = require("ejs");
 
 const app = express();
 const nodemailer= require('nodemailer');
 
 app.use("/public", express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+  res.render("index");
+});
+
+app.get("/success", function(req, res) {
+  res.render("success")
+});
+
+app.get("/rejected", function(req, res) {
+  res.render("rejected")
 });
 
 app.post("/contact", function(req, res) {
@@ -52,17 +62,17 @@ app.post("/contact", function(req, res) {
 
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
     console.log('Message sent: %s', info.messageId);
-
-    // console.log(info.accepted.length)
-    if(info.accepted.length > 0) {
-      
-    } else {
-      
-    }
     
   }
 
-  main().catch(console.error);
+  main()
+  .then(function() {
+    res.redirect("/success");
+  })
+  .catch(function(err) {
+    console.log(err);
+    res.redirect("/rejected");
+  });
 
 });
 

@@ -13,5 +13,4 @@ $(window).on("load", function () {
   });
   $('#construction-img').append(constructionImg);
   
-  
 });

@@ -1,31 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- BOOTSTRAP STYLESHEET -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Abel|Montserrat&display=swap" rel="stylesheet">
-
-  <!-- FONT AWESOME ICON -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-  <!-- STYLESHEET CSS -->
-  <link rel="stylesheet" href="/public/styles.css">
-  
-  <title>Ozubergz</title>
-
-</head>
-<body>
+<%- include("partials/head.ejs") -%>
 
   <header class="parallax-box">
     <div class="logo"></div>
+    <div class="loading-msg">
+      <h4>Sending message...</h4>
+    </div>
     <div class="scroll-down">
       <img src="/public/images/scroll.svg" alt="scroll arrow">
     </div>
@@ -209,7 +188,7 @@
 
         <div class="contact-form">
           <p>If you like to contact me, feel free to submit a message with your email.</p>
-          <form method="POST" action="/contact">
+          <form id="form" method="POST" action="/contact">
             <div class="form-group">
               <label for="email">Email:</label>
               <input type="email" id="email" class="form-control" name="email" required>
@@ -222,30 +201,12 @@
               <label for="message">Message:</label>
               <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="submit" id="submit" class="btn btn-primary">Send</button>
           </form>
         </div>
       </div>
     </div>
 
   </div>
-  
 
-
-
-</body>
-
-<!-- JQUERY -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- BOOTSTRAP JQUERY -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="/public/functions.js"></script>
-<script src="/public/loadImg.js"></script>
-</html>
+  <%- include("partials/footer.ejs") -%>

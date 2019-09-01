@@ -1,4 +1,5 @@
 //reset page to top when refreshed
+
 $(window).on('beforeunload', function () {
   $(this).scrollTop(0);
 });
@@ -47,3 +48,18 @@ $('#show-info').click(function() {
 $('#hide-info').click(function() {
   $('.overlay-text').hide();
 });
+
+//when form is submitted show loading message
+$('#form').submit(function() {
+  $('.loading-msg').show();
+});
+
+//if success page is shown, hide loading message
+if($('.success-pg').is(':visible')) {
+  $('.loading-msg').hide();
+}
+
+//if rejected page is shown, hide loading message
+if ($('.rejected-pg').is(':visible')) {
+  $('.loading-msg').hide();
+}
