@@ -14,18 +14,14 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-app.get("/success", function(req, res) {
-  res.render("success")
-});
-
-app.get("/rejected", function(req, res) {
-  res.render("rejected")
-});
+let email;
+let subject;
+let message;
 
 app.post("/contact", function(req, res) {
-  let email = req.body.email,
-      subject = req.body.subject,
-      message = req.body.message;
+  email = req.body.email,
+  subject = req.body.subject,
+  message = req.body.message;
 
   let output = `
     <h4>New Contact</h4>
@@ -67,11 +63,13 @@ app.post("/contact", function(req, res) {
 
   main()
   .then(function() {
-    res.redirect("/success");
+    res.render("success");
+    res.end();
   })
   .catch(function(err) {
     console.log(err);
-    res.redirect("/rejected");
+    res.render("rejected");
+    res.end();
   });
 
 });
