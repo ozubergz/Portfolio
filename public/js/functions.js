@@ -6,7 +6,6 @@ $(window).on('beforeunload', function () {
 
 $(window).scroll(function() {
   let scrollTop = $(this).scrollTop();
-  // let height = $(this).height();
 
   //fades out parallax logo when scrolling down
   $('.logo').css({
@@ -22,7 +21,6 @@ $(window).scroll(function() {
   } else {
     $('.projects, .resume, .contact').removeClass('animateUp');
   }
-  
 });
 
 //show collapse only once when clicked multiple times
@@ -52,14 +50,29 @@ $('#hide-info').click(function() {
 //when form is submitted show loading message
 $('#form').submit(function() {
   $('.loading-msg').show();
+  $('.logo').hide();
+  $('.scroll-down').hide();
+
+  $('.parallax-box').on('scroll touchmove mousewheel', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+
 });
 
 //if success page is shown, hide loading message
 if($('.success-pg').is(':visible')) {
   $('.loading-msg').hide();
+  $('.logo').show();
+  $('.scroll-down').show();
+  $('.parallax-box').off('scroll touchmove mousewheel');
 }
 
 //if rejected page is shown, hide loading message
 if ($('.rejected-pg').is(':visible')) {
   $('.loading-msg').hide();
+  $('.logo').show();
+  $('.scroll-down').show();
+  $('.parallax-box').off('scroll touchmove mousewheel');
 }
