@@ -11,7 +11,7 @@ html, body {
 }
 
 .title-logo {
-  background-image: url("/public/images/logo.svg");
+  background-image: url("/public/images/logo.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
