@@ -1,5 +1,4 @@
 //reset page to top when refreshed
-
 $(window).on('beforeunload', function () {
   $(this).scrollTop(0);
 });
@@ -62,5 +61,14 @@ $('#form').submit(function() {
   });
   
 });
+
+// $('.btn').click(function() {
+//   if ($('.btn').attr('aria-expanded') === true) {
+//     console.log("clicked")
+//   }
+
+// });
+
+
 
 
