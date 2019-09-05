@@ -6,27 +6,58 @@ html, body {
 }
 
 .header {
+  min-height: 100%;
   height: 100%;
   background-color: black;
 }
 
 .title-logo {
-  background-image: url("/public/images/logo.jpg");
-  background-size: auto;
+  color: white;
+  background-image: url("/public/images/logo.png");
+  background-size: 28rem;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 85%;
   opacity: 1;
 }
 
 .scroll-logo {
   text-align: center;
-  height: 10%;
+  height: 15%;
+}
+
+.scroll-text {
+  display: block;
+  margin: auto;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  width: 3em;
+  margin-bottom: -0.2em;
+}
+
+.scroll-text:focus {
+  outline: none;
+}
+
+.scroll-text:hover span {
+  display: none;
+}
+
+.scroll-text:hover::before {
+  content: "Click";
+}
+
+.down-arrow:hover {
+  cursor: pointer;
 }
 
 .main-container {
-  height: 100%;
+  height: auto !important;
+  min-height: 100%;
+  overflow: hidden;
   background-color: #252525;
   font-family: 'Montserrat', sans-serif;
 }
@@ -49,6 +80,12 @@ html, body {
 
 .main-container > .button-group .btn:hover {
   cursor: pointer;
+  background: rgb(56, 56, 56);
+  opacity: 0.5;
+  color:rgb(136, 136, 136);
+}
+
+.highlight {
   background: rgb(56, 56, 56);
   opacity: 0.5;
   color:rgb(136, 136, 136);
@@ -325,8 +362,6 @@ a:hover {
 .fa-arrow-left {
   color: black;
 }
-
-
 
 /* For Mobile */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -619,21 +654,15 @@ a:hover {
   }
 
   .resume-content .language {
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
   }
 
   .resume-content .skills {
-    margin-left: -6rem;
+    /* margin-left: -6rem; */
   }
 
   .resume-content .language {
-    margin-left: 5rem;
-  }
-
-  .container {
-    padding-left: 10rem !important;
-    padding-right: 10rem !important;
-    max-width: initial !important;
+    /* margin-left: 5rem; */
   }
 
   .carousel {

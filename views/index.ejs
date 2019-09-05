@@ -7,8 +7,9 @@
     </div>
     <div class="title-logo"></div>
     <div class="scroll-logo">
-      <a href="#main">
-        <img src="/public/images/scroll.svg" alt="scroll arrow">
+      <button class="scroll-text"><span>Scroll</span></button>
+      <a class="down-arrow">
+        <img src="/public/images/down-arrow.svg" alt="scroll arrow">
       </a>
     </div>
   </header>
@@ -16,11 +17,11 @@
   <div class="container-fluid main-container" id="main">
 
     <div class="button-group">
-      <div class="row">
+      <div class="nav-btns row">
         <div class="btn projects col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#projects" aria-expanded="false" aria-controls="projects">
           Projects
         </div>
-        <div class="btn resume col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#resume"  aria-expanded="true" aria-controls="resume">
+        <div class="btn resume col-md-4 col-sm-4 col-4 highlight" data-toggle="collapse" data-target="#resume"  aria-expanded="true" aria-controls="resume">
           Resume / About Me
         </div>
         <div class="btn contact col-md-4 col-sm-4 col-4" data-toggle="collapse" data-target="#contact"  aria-expanded="false" aria-controls="contact">
@@ -111,8 +112,8 @@
               <li>Interest in web-design and film</li>
             </ul>
           </div>
-          <div class="container row">
-            <div class="job-experience col-md-6">
+          <div class="container-fluid row">
+            <div class="job-experience col-md-5">
               <h4>Work Experience</h4>
               <div>
                 <h5 class="job-title">Risingstar Learning Center, College Point — Teacher</h5>
@@ -134,7 +135,7 @@
                 </ul>
               </div>
             </div>
-            <div class="skills col-md-3">
+            <div class="skills col-md-4">
               <div>
                 <h4>Skills</h4>
                 <ul>

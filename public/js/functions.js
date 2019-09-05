@@ -1,3 +1,4 @@
+
 //reset page to top when refreshed
 $(window).on('beforeunload', function () {
   $(this).scrollTop(0);
@@ -62,13 +63,17 @@ $('#form').submit(function() {
   
 });
 
-// $('.btn').click(function() {
-//   if ($('.btn').attr('aria-expanded') === true) {
-//     console.log("clicked")
-//   }
+$('.nav-btns .btn').on("click", function() {
+  $(this).addClass('highlight');
+  $(this).siblings().removeClass('highlight');
+});
 
-// });
-
+$('.scroll-text, .down-arrow').click(function() {
+  $('#main')[0].scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
 
 
 
