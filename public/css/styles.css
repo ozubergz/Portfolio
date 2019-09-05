@@ -400,7 +400,7 @@ a:hover {
   }
 
   .resume-content li {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 
   .resume-content .about-me {
@@ -458,22 +458,15 @@ a:hover {
     display: none;
   }
 
-  .overlay-btn-show {
+  #show-info {
     position: absolute;
     bottom: 1rem;
-    width: 100%;
-    text-align: center;
+    left: 50%;
+    margin-left: -25%;
   }
 
   .overlay-thumbnail {
-    background-color: rgba(255, 217, 0, 0);
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-
-  .carousel-img:hover .overlay-thumbnail {
-    height: 100%;
+    display: none;
   }
 
   .overlay-text {

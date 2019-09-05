@@ -14,3 +14,7 @@ $(window).on("load", function () {
   $('#construction-img').append(constructionImg);
   
 });
+
+ $("#project1").click(function () {
+   console.log('clicked')
+ })
